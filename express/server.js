@@ -1,6 +1,7 @@
 'use strict';
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 const serverless = require('serverless-http');
 const app = express();
 const bodyParser = require('body-parser');
@@ -11,6 +12,11 @@ const router = express.Router();
 //   res.write('<h1>Hello from Express.js!</h1>');
 //   res.end();
 // });
+
+app.use(cors({
+  origin: '*',
+  allowedHeaders: ['Origin, X-Requested-With, Content-Type, Accept'],
+}));
 
 router.get('/datamanager', (req,res) => {
   return res.json({data: 'pile of data'});
