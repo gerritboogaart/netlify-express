@@ -1,8 +1,14 @@
 const express = require('express');
 const axios = require('axios');
 const locs = require('./locations.json');
+const cors = require('cors');
 
 const app = express();
+
+app.use(cors({
+  origin: '*',
+  allowedHeaders: ['Origin, X-Requested-With, Content-Type, Accept'],
+}));
 
 const weather = 'https://api.darksky.net/forecast/734380008b4832fb5da71a68d80737d4/';
 // const test = 'https://api.darksky.net/forecast/734380008b4832fb5da71a68d80737d4/36.8506,-75.9779';
