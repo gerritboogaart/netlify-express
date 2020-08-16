@@ -1,6 +1,18 @@
 <!DOCTYPE html>
-<object
+<head>
+  <script>
+    console.log('hello world');
+    const data = fetch('./datamanager').then( d => console.log(d.data));
+    const ded = fetch('./locs').then( d => console.log(d.data));
+  </script>
+</head>
+<!-- <object
   type="text/html"
   data="/.netlify/functions/server"
   style="width:100%;height:100%;"
->
+> -->
+<body>
+  Hello World, you aweful things!
+
+
+</body>
