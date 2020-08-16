@@ -12,7 +12,7 @@ const router = express.Router();
 //   res.end();
 // });
 
-router.get('/datamanager', (req,red) => {
+router.get('/datamanager', (req,res) => {
   return res.json({data: 'pile of data'});
 })
 router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
