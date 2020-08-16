@@ -1,20 +1,16 @@
 const express = require('express');
-const proxy = require('express-http-proxy');
-const cors = require("cors");
 const axios = require('axios');
-const path = require('path');
 const locs = require('./locations.json');
-
 
 const app = express();
 
 const weather = 'https://api.darksky.net/forecast/734380008b4832fb5da71a68d80737d4/';
-const test = 'https://api.darksky.net/forecast/734380008b4832fb5da71a68d80737d4/36.8506,-75.9779';
+// const test = 'https://api.darksky.net/forecast/734380008b4832fb5da71a68d80737d4/36.8506,-75.9779';
 
 const location = 'https://maps.googleapis.com/maps/api/geocode/json?';
 const api = 'AIzaSyC1dEid2g2vnR4-hHJvN_ZbNN1o9vOUwFI';
 
-const router = express.Router();
+// const router = express.Router();
 // router.get('/', (req, res) => {
 //   res.writeHead(200, { 'Content-Type': 'text/html' });
 //   res.write('<h1>Hello from Express.js!</h1>');
