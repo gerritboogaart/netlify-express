@@ -3,7 +3,7 @@ const proxy = require('express-http-proxy');
 const cors = require("cors");
 const axios = require('axios');
 const path = require('path');
-// const locs = require('./locations.json');
+const locs = require('./locations.json');
 
 
 const app = express();
