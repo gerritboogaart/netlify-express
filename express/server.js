@@ -19,7 +19,8 @@ app.use(cors({
 }));
 
 router.get('/datamanager', (req,res) => {
-  return res.json({data: 'pile of data'});
+  if (req.query.sol === 'bazinga') return res.json({data: 'pile of data'});
+  return res.status(400).send('no soup for you');
 })
 router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
 router.post('/', (req, res) => res.json({ postBody: req.body }));
